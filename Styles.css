@@ -1,0 +1,31 @@
+#about {
+    background-color: bisque;
+    text-align: center;
+    padding-top: 30%;
+    height: 80vh;
+}
+
+#work {
+    background-color: red;
+    text-align: center;
+    padding-top: 10%;
+    height: 100vh;
+}
+
+#contact {
+    background-color: mediumseagreen;
+    text-align: center;
+    padding-top: 10%;
+    height: 100vh;
+}
+
+.navbar {
+    background-color: grey;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 10px;
+}
+
+.link {
+    padding: 10px;
+}
