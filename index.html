@@ -3,51 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <link type="text/css" rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/51264b33c8.js" crossorigin="anonymous"></script>
     <title>Portfolio</title>
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <div class="link"><a href="#about">About</a></div>
-            <div class="link"><a href="#work">Work</a></div>
+        <nav class="navbar" id="navbar">
+            <div class="link"><a href="#welcome-section">About</a></div>
+            <div class="link"><a href="#projects">Work</a></div>
             <div class="link"><a href="#contact">Contact</a></div>
         </nav>
     </header>
 
-    <div id="about">
+    <div id="welcome-section">
         <h1>Hi, I'm Josiah</h1>
         <h3>A software developer</h3>
         <h5>and a 2nd year university student</h5>
     </div>
 
-    <div id="work">
-        <h1><u>These are my projects...</u></h1>
+    <div id="projects">
+        <h1>These are my projects...</h1>
 
         <div id="project-grid">
 
-            <div class="project">
-                <div class="image">
-                    <img src="p1.jpeg" alt="Project 1" height="112px" width="112px">
+            <div class="project-tile">
+                <div class="image hover-zoom">
+                    <img src="Dappr Drivers.png" alt="Project 1" height="112px" width="112px">
                 </div>
                 <div class="img_text">
                     <h3><strong>Dappr Drivers</strong>: Single Page Application for a Chauffeur Service</3>
                 </div>
             </div>
 
-            <div class="project">
-                <div class="image">
-                    <img src="p2.jpeg" alt="Project 2" height="112px" width="112px">
+            <div class="project-tile">
+                <div class="image hover-zoom">
+                    <img src="Shell.jpg" alt="Project 2" height="112px" width="112px">
                 </div>
                 <div class="img_text">
                     <h3><strong>Shell program</strong>: Command line written in C.</3>
                 </div>
             </div>
 
-            <div class="project">
-                <div class="image">
-                    <img src="np3.jpeg" alt="Project 3" height="112px" width="112px">
+            <div class="project-tile">
+                <div class="image hover-zoom">
+                    <img src="js doc.png" alt="Project 3" height="112px" width="112px">
                 </div>
                 <div class="img_text">
                     <h3><strong>JS Documentation: An intro to JavaScript</strong></3>
@@ -55,11 +56,10 @@
             </div>
 
            
-            <button><h4>Show all</h4></button>
+            <button><h4><a href="https://github.com/josiah-mbao" id="profile-link" target="_blank">Show all</a></h4></button>
 
         </div>
 
-        <div id="button">
 
         </div>
     </div>

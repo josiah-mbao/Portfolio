@@ -3,7 +3,7 @@ body {
     padding: 0;
 }
 
-#about {
+#welcome-section {
     background-color: #222629;
     text-align: center;
     padding-top: 20%;
@@ -13,7 +13,7 @@ body {
     margin-top: auto;
 }
 
-#work {
+#projects {
     background-color: black;
     text-align: center;
     padding: 10%;
@@ -71,7 +71,7 @@ a:hover {
 }
 
 
-.project {
+.project-tile {
     display: flex;
     flex-direction: row;
     width: 35%;
@@ -145,4 +145,43 @@ footer {
     color: #aaabb8;
     border-left: white;
     border-width: 10px;
+}
+
+
+.hover-zoom img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.hover-zoom:hover img {
+    transform: scale(1.5);
+}
+
+
+
+@media (max-width: 768px) {
+    #welcome-section {
+        padding-top: 15%;
+    }
+
+    #projects {
+        padding: 5%;
+    }
+
+    #contact {
+        padding-top: 2%;
+    }
+
+    .project-tile {
+        width: 80%;
+        margin: 15px;
+    }
+
+    .image {
+        max-width: 30%;
+    }
+
+    footer {
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
 }
