@@ -12,17 +12,14 @@ jobs:
     steps:
     - name: Set up Git
       run: |
-        git config --global user.email josiahmbaomc@gmail.com
-        git config --global user.name josiah-mbao
+        git config --global user.email "josiahmbaomc@gmail.com"
+        git config --global user.name "josiah-mbao"
     
     - name: Checkout repository
       uses: actions/checkout@v4.1.1
 
-
     - name: Deploy to GitHub Pages
       run: |
-        git config user.name "${{ secrets.GITHUB_ACTOR }}"
-        git config user.email "${{ secrets.GITHUB_ACTOR }}@users.noreply.github.com"
         git add .
         git commit -m "Deploy to GitHub Pages"
-        git push "https://${{ secrets.GITHUB_ACTOR }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" main:main
+        git push "https://${{ secrets.GITHUB_ACTOR }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" main
