@@ -10,8 +10,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Set up Git
+      run: |
+        git config --global user.email josiahmbaomc@gmail.com
+        git config --global user.name josiah-mbao
+    
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4.1.1
+
 
     - name: Deploy to GitHub Pages
       run: |
