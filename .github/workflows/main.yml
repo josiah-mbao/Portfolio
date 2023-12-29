@@ -16,7 +16,7 @@ jobs:
         git config --global user.name josiah-mbao
     
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Display changed files
       run: |
