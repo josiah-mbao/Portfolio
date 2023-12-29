@@ -16,7 +16,8 @@ jobs:
         git config --global user.name josiah-mbao
 
     - name: Print Working Directory
-      run: echo "Current Working Directory: $(pwd)"
+      run: |
+        echo "Current Working Directory: $(pwd)"
 
     - name: Checkout repository
       uses: actions/checkout@v4.1.1
