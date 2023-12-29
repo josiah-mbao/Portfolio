@@ -28,4 +28,5 @@ jobs:
         git config user.email "josiahmbaomc@gmail.com"
         git add .
         git commit -m "Deploy to GitHub Pages"
-        git push "https://${{ secrets.GITHUB_ACTOR }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" main:main
+        git push "https://josiah-mbao:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" main:main
+        
