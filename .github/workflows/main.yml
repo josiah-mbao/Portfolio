@@ -12,14 +12,35 @@ jobs:
     steps:
     - name: Set up Git
       run: |
-        git config --global user.email "josiahmbaomc@gmail.com"
-        git config --global user.name "josiah-mbao"
-    
+        git config --global user.email josiahmbaomc@gmail.com
+        git config --global user.name josiah-mbao
+
+    - name: Print Working Directory
+      run: echo "Current Working Directory: $(pwd)"
+
     - name: Checkout repository
       uses: actions/checkout@v4.1.1
 
-    - name: Deploy to GitHub Pages
+    - name: Git Status
+      run: git status
+
+    - name: Debug Output
       run: |
-        git add .
-        git commit -m "Deploy to GitHub Pages"
-        git push "https://${{ secrets.GITHUB_ACTOR }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" main
+        echo "Current Working Directory: $(pwd)"
+        echo "List of Files: $(ls -al)"
+
+    - name: Stage Changes
+      run: git add -A
+
+    - name: Git Status After Stage
+      run: git status
+
+    - name: Commit Changes
+      run: |
+        git commit -m "Deploy to GitHub Pages" --author="Your Name <your.email@example.com>"
+
+    - name: Git Status After Commit
+      run: git status
+
+    - name: Push Changes
+      run: git push "https://${{ secrets.GITHUB_ACTOR }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" main:main
