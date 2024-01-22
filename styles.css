@@ -4,6 +4,20 @@ body {
     font-family: 'Crete Round', serif; /* Adding the custom font to the body */
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+.profile-picture {
+    width: 100%; /* Make the image fill its container */
+    max-width: 200px; /* Set a maximum width to prevent it from becoming too large */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 10%;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
 #welcome-section {
     background-color: #222629;
     text-align: center;
@@ -32,6 +46,10 @@ body {
     color: #aaabb8;
 }
 
+#project-grid h3 {
+    color: black;
+}
+
 .navbar {
     background-color: black;
     display: flex;
@@ -45,8 +63,17 @@ body {
 .link {
     padding: 10px;
     height: 100%;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add smooth transition */
 }
 
+.link:hover {
+    background-color: #272727;
+    color: #fff;
+}
+
+.link:active {
+    background-color: #222629; /* Change background color on click */
+}
 
 a {
     color: white;
@@ -156,7 +183,6 @@ footer {
 .hover-zoom:hover img {
     transform: scale(1.8);
 }
-
 
 
 @media (max-width: 768px) {
