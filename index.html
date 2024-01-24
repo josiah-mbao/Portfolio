@@ -35,13 +35,12 @@
 
     <div id="welcome-section">
         <img src="memoji.png" alt="Your Memoji" class="profile-picture">
-        <h1>Hi, I'm Josiah </h1>
-        <h2>A software engineering student</h2>
-        <h3>and I love to solve problems!</h3>
+        <h1>Hi, I'm Josiah,</h1>
+        <h2>a <h1 id="role-text"></h1></h2>
     </div>
 
     <div id="projects">
-        <h1>These are my projects...</h1>
+        <h1>Some of my projects...</h1>
 
         <div id="project-grid">
 
@@ -118,7 +117,37 @@
         </div>
 
  
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const roles = ['software engineer', 'python developer', 'cloud engineer', 'data analyst'];
+            const roleTextElement = document.getElementById('role-text');
+            let roleIndex = 0;
+            let charIndex = 0;
 
+            function typeRole() {
+                if (charIndex < roles[roleIndex].length) {
+                roleTextElement.textContent += roles[roleIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(typeRole, 100); // Adjust the typing speed (milliseconds)
+                } else {
+                    setTimeout(backspaceRole, 1000); // Wait for 1 second before backspacing
+            }
+        }
+
+            function backspaceRole() {
+                if (charIndex > 0) {
+                    roleTextElement.textContent = roles[roleIndex].substring(0, charIndex - 1);
+                    charIndex--;
+                    setTimeout(backspaceRole, 30); // Adjust the backspacing speed (milliseconds)
+                } else {
+                    roleIndex = (roleIndex + 1) % roles.length; // Move to the next role
+                    setTimeout(typeRole, 500); // Wait for 0.5 seconds before typing the next role
+            }
+        }
+
+    typeRole(); // Start the typing animation
+});
+    </script>
 
 </body>
 </html>

@@ -98,6 +98,26 @@ a:hover {
     padding: 5px;
 }
 
+#role-text {
+    color: #756e51;
+    font-size: 2em;
+}
+
+#role-text::after {
+    content: '|'; /* Represents the cursor */
+    display: inline-block;
+    margin-left: 0.1em; /* Adjust the distance between the cursor and text */
+    animation: blinkCursor 0.7s infinite; /* Cursor blinking animation */
+}
+
+@keyframes blinkCursor {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
 
 .project-tile {
     display: flex;
