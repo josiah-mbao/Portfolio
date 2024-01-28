@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Crete Round', serif; /* Adding the custom font to the body */
+    background-color: #222629;
 }
 
 html {
@@ -39,11 +40,77 @@ html {
 #contact {
     background-color: #222629;
     text-align: center;
-    padding-top: 5%;
+    padding: 5%;
     height: 50vh;
     max-width: 100%;
     padding-bottom: 1%;
     color: #aaabb8;
+}
+
+#contact h1 {
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-row label {
+    font-size: 1.2em;
+    margin-right: 10px; /* Adjust spacing between label and input */
+}
+
+input {
+    width: 70%;
+    padding: 8px;
+    background-color: #222629;
+    color: #aaabb8;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 70%;
+    padding-bottom: 30px;
+    background-color: #222629;
+    color: #aaabb8;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    resize: vertical; /* Allow vertical resizing */
+}
+
+/* Optional: Add focus styles for better user feedback */
+textarea:focus {
+    border-color: #555;
+    outline: none;
+    box-shadow: 0 0 5px rgba(85, 85, 85, 0.3);
+}
+
+/* Style for the submit button */
+#contact-form button {
+    background-color: #222629;
+    color: #aaabb8;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: greenyellow;
+    color: black;
 }
 
 #project-grid h3 {
@@ -235,15 +302,15 @@ footer {
 
 @media (max-width: 768px) {
     #welcome-section {
-        padding-top: 15%;
+        padding-top: 55%;
     }
 
     #projects {
-        padding: 5%;
+        padding-bottom: 75%;
     }
 
     #contact {
-        padding-top: 2%;
+        padding-top: 15%;
         padding-bottom: 2%;
     }
 
@@ -258,7 +325,48 @@ footer {
     }
 
     .navbar {
-        flex-direction: column; /* Stack navigation links vertically on smaller screens */
+        flex-direction: row; /* Stack navigation links vertically on smaller screens */
+        align-items: center;
+        text-align: center;
+    }
+
+    .link {
+        padding: 10px;
+        width: 100%; /* Make navigation links full width on smaller screens */
+    }
+
+    footer {
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+}
+
+@media (max-width: 768px) {
+    #welcome-section {
+        padding-top: 55%;
+    }
+
+    #projects {
+        padding-bottom: 150%;
+    }
+
+    #contact {
+        padding-top: 15%;
+        padding-bottom: 2%;
+    }
+
+    .project-tile {
+        width: 100%; /* Full width on smaller screens */
+        flex-direction: column; /* Stack tiles vertically */
+        align-items: center;
+    }
+
+    .image {
+        max-width: 80%; /* Adjust image size for smaller screens */
+    }
+
+    .navbar {
+        flex-direction: row; /* Stack navigation links vertically on smaller screens */
         align-items: center;
         text-align: center;
     }
