@@ -12,20 +12,17 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+      with:
+        persist-credentials: false
 
     - name: Set up Git
       run: |
         git config --global user.email "josiahmbaomc@gmail.com"
         git config --global user.name "josiah-mbao"
     
-    - name: Display changed files
-      run: |
-        git diff --name-only
-
     - name: Deploy to GitHub Pages
-      run: |
-        git config user.name "josiah-mbao"
-        git config user.email "josiahmbaomc@gmail.com"
-        git add .
-        git commit -m "Deploy to GitHub Pages" || echo "No changes to commit"
-        git push "https://josiah-mbao:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" main:main
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages
+        publish_dir: .  # Use the current directory
