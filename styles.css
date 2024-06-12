@@ -1,7 +1,8 @@
+/* General styles */
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Crete Round', serif; /* Adding the custom font to the body */
+    font-family: 'Crete Round', serif;
     background-color: #222629;
 }
 
@@ -10,17 +11,56 @@ html {
 }
 
 .profile-picture {
-    width: 100%; /* Make the image fill its container */
-    max-width: 200px; /* Set a maximum width to prevent it from becoming too large */
-    height: auto; /* Maintain the aspect ratio */
+    width: 100%;
+    max-width: 200px;
+    height: auto;
     border-radius: 10%;
     margin: 0 auto;
     display: block;
     margin-bottom: 20px;
 }
 
+/* Header section */
+#navbar {
+    background-color: black;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 10px;
+    position: fixed;
+    width: 100vw;
+    max-width: 100%;
+}
+
+.link {
+    padding: 10px;
+    height: 100%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.link:hover {
+    background-color: #272727;
+    color: #fff;
+}
+
+.link:active {
+    background-color: #222629;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: larger;
+}
+
+a:hover {
+    background-color: #272727;
+    color: white;
+    text-decoration: underline;
+}
+
+/* Welcome section */
 #welcome-section {
-    background-color:  #1c1c1e;
+    background-color: #1c1c1e;
     text-align: center;
     padding-top: 20%;
     height: 100vh;
@@ -29,6 +69,7 @@ html {
     margin-top: auto;
 }
 
+/* Project section */
 #projects {
     background-color: black;
     text-align: center;
@@ -37,6 +78,34 @@ html {
     max-width: 100%;
 }
 
+#project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.project-tile {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 3%;
+}
+
+.project-tile .image {
+    height: 50%;
+    overflow: hidden;
+}
+
+.project-tile .image img {
+    width: 100%;
+    height: auto;
+}
+
+.project-info {
+    padding: 10px;
+}
+
+/* Contact section */
 #contact {
     background-color: #222629;
     text-align: center;
@@ -65,10 +134,11 @@ form {
 
 .form-row label {
     font-size: 1.2em;
-    margin-right: 10px; /* Adjust spacing between label and input */
+    margin-right: 10px;
 }
 
-input {
+input,
+textarea {
     width: 70%;
     padding: 8px;
     background-color: #222629;
@@ -79,24 +149,17 @@ input {
 }
 
 textarea {
-    width: 70%;
     padding-bottom: 30px;
-    background-color: #222629;
-    color: #aaabb8;
-    border: 1px solid #ccc;
     border-radius: 6px;
-    box-sizing: border-box;
-    resize: vertical; /* Allow vertical resizing */
+    resize: vertical;
 }
 
-/* Optional: Add focus styles for better user feedback */
 textarea:focus {
     border-color: #555;
     outline: none;
     box-shadow: 0 0 5px rgba(85, 85, 85, 0.3);
 }
 
-/* Style for the submit button */
 #contact-form button {
     background-color: #222629;
     color: #aaabb8;
@@ -113,129 +176,15 @@ textarea:focus {
     color: black;
 }
 
-#project-grid h3 {
-    color: black;
-}
-
-.navbar {
-    background-color: black;
-    display: flex;
-    flex-direction: row-reverse;
-    padding-top: 10px;
-    position: fixed;
-    width: 100vw;
-    max-width: 100%;
-}
-
-.link {
-    padding: 10px;
-    height: 100%;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Add smooth transition */
-}
-
-.link:hover {
-    background-color: #272727;
-    color: #fff;
-}
-
-.link:active {
-    background-color: #222629; /* Change background color on click */
-}
-
-a {
-    color: white;
-    text-decoration: none;
-    font-size: larger;
-}
-
-
-a:hover {
-    background-color:#272727;
-    color: white;
-    text-decoration: underline;
-}
-
-
-
-#project-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px;
-}
-
-#role-text {
-    color: #756e51;
-    font-size: 2em;
-}
-
-#role-text::after {
-    content: '|'; /* Represents the cursor */
-    display: inline-block;
-    margin-left: 0.1em; /* Adjust the distance between the cursor and text */
-    animation: blinkCursor 0.7s infinite; /* Cursor blinking animation */
-}
-
-@keyframes blinkCursor {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-}
-
-.project-tile {
-    display: flex;
-    flex-direction: row;
-    width: 35%;
-    height: 27%;
-    background-color: white;
-    align-items: center;
-    padding: 5px;
-    margin: 25px;
-    border-radius: 3%;
-
-}
-
-.image {
-    max-width: 50%;
-    height: 5%;
-    background-color: #272727;
-}
-
-img {
-    border-radius: 5%;
-}
-
-button {
-    padding: 10px 20px;
+/* Footer section */
+footer {
     background-color: #222629;
-    color: white;
-    border: none;
-    cursor: pointer;
-
-    /* Rounded shape */
-    border-radius: 20px;
-
-    /* Shadow effect */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-
-    /* Hover effect */
-    transition: background-color 0.3s ease;
+    text-align: center;
+    padding-top: 5%;
+    height: 50vh;
+    max-width: 100%;
+    padding-bottom: 1%;
 }
-
-button:hover {
-    background-color: #272727;
-}
-
-
-h1 {
-    font-size: 50px;
-    color: white;
-}
-
 
 .icon {
     display: inline-block;
@@ -246,22 +195,11 @@ h5 {
     margin-bottom: 10px;
 }
 
-
-footer {
-    background-color: #222629;
-    text-align: center;
-    padding-top: 5%;
-    height: 50vh;
-    max-width: 100%;
-    padding-bottom: 1%;
-}
-
 .img_text {
     color: #aaabb8;
     border-left: white;
     border-width: 10px;
 }
-
 
 .hover-zoom img {
     transition: transform 0.3s ease-in-out;
@@ -271,7 +209,7 @@ footer {
     transform: scale(1.8);
 }
 
-
+/* Responsive styles */
 @media (max-width: 768px) {
     #welcome-section {
         padding-top: 15%;
@@ -300,7 +238,7 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     #welcome-section {
         padding-top: 55%;
     }
@@ -315,65 +253,24 @@ footer {
     }
 
     .project-tile {
-        width: 100%; /* Full width on smaller screens */
-        flex-direction: column; /* Stack tiles vertically */
+        width: 100%;
+        flex-direction: column;
         align-items: center;
     }
 
     .image {
-        max-width: 80%; /* Adjust image size for smaller screens */
+        max-width: 80%;
     }
 
     .navbar {
-        flex-direction: row; /* Stack navigation links vertically on smaller screens */
+        flex-direction: row;
         align-items: center;
         text-align: center;
     }
 
     .link {
         padding: 10px;
-        width: 100%; /* Make navigation links full width on smaller screens */
-    }
-
-    footer {
-        padding-top: 2%;
-        padding-bottom: 2%;
-    }
-}
-
-@media (max-width: 768px) {
-    #welcome-section {
-        padding-top: 55%;
-    }
-
-    #projects {
-        padding-bottom: 150%;
-    }
-
-    #contact {
-        padding-top: 15%;
-        padding-bottom: 2%;
-    }
-
-    .project-tile {
-        width: 100%; /* Full width on smaller screens */
-        flex-direction: column; /* Stack tiles vertically */
-        align-items: center;
-    }
-
-    .image {
-        max-width: 80%; /* Adjust image size for smaller screens */
-    }
-
-    .navbar {
-        flex-direction: row; /* Stack navigation links vertically on smaller screens */
-        align-items: center;
-        text-align: center;
-    }
-
-    .link {
-        padding: 10px;
-        width: 100%; /* Make navigation links full width on smaller screens */
+        width: 100%;
     }
 
     footer {

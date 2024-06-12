@@ -41,24 +41,35 @@
     </div>
 
     <div id="projects">
-        <h1>Some of my projects...</h1>
+        <h1 style="color:white;">Projects</h1>
 
         <div id="project-grid">
+            <div class="project-tile">
+                <div class="image hover-zoom">
+                    <img src="image_compressor.png" alt="Project 1" height="112px" width="200px">
+                </div>
+                <div class="project-info">
+                    <h3><strong>Image compressor</strong></h3>
+                    <p>Uses machine learning and dimension reduction techniques to reduce image size. Used NumPy, Matplotlib and Scikit-Learn libraries.</p>
+                </div>
+            </div>
 
             <div class="project-tile">
                 <div class="image hover-zoom">
-                    <img src="Dappr Drivers.png" alt="Project 1" height="112px" width="200px">
+                    <img src="pong.png" alt="Project 1" height="112px" width="200px">
                 </div>
-                <div class="img_text">
-                    <h3><strong>Dappr Drivers</strong>: Product Landing Page</3>
+                <div class="project-info">
+                    <h3><strong>Pong</strong></h3>
+                    <p>A 2D arcade game that I made for a client on Fiverr. I Used Python's Pygame library.</p>
                 </div>
             </div>
             <div class="project-tile">
                 <div class="image hover-zoom">
-                    <img src="Shell.jpg" alt="Project 2" height="112px" width="200px">
+                    <img src="simulator.png" alt="Project 1" height="112px" width="200px">
                 </div>
-                <div class="img_text">
-                    <h3><strong>Shell program</strong>: Command line written in C.</3>
+                <div class="project-info">
+                    <h3><strong>Particle Simulator</strong></3>
+                    <p>Also uses Python's Pygame library.</p>
                 </div>
             </div>
 
@@ -80,10 +91,19 @@
                 </div>
             </div>
 
+            <div class="project-tile">
+                <div class="image hover-zoom">
+                    <img src="pong game.png" alt="Project 4" height="112px" width="200px">
+                </div>
+                <div class="img_text">
+                    <h3><strong>Pong</strong>: 2D Arcade Game with Python and Pygame</3>
+                </div>
+            </div>
+
            
-            <button><h4><a href="https://github.com/josiah-mbao" id="profile-link" target="_blank">Portfolio</a></h4></button>
 
         </div>
+        <button><h4><a href="https://github.com/josiah-mbao" id="profile-link" target="_blank">Portfolio</a></h4></button>
 
 
         </div>
@@ -142,7 +162,7 @@
  
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const roles = ['software engineer', 'python developer', 'cloud engineer', 'data analyst'];
+            const roles = ['software engineer', 'python developer', 'cloud engineer', 'devops engineer'];
             const roleTextElement = document.getElementById('role-text');
             let roleIndex = 0;
             let charIndex = 0;
