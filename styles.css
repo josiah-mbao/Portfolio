@@ -314,7 +314,11 @@ h5 {
         flex-direction: row;
         align-items: center;
         text-align: center;
-    }
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        }
 
     .link {
         padding: 10px;
