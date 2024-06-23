@@ -113,17 +113,33 @@ a:hover {
 
 /* Welcome section */
 #welcome-section {
+    display: flex;
     background-color: #1c1c1e;
     text-align: center;
-    padding-top: 20%;
-    height: 50vh;
+    padding-top: 10%;
+    height: 70vh;
     color: white;
     max-width: 100vw;
     margin-top: auto;
+    padding-bottom: 10%;
+}
+
+#w-left {
+    width: 40vw;
+}
+
+#w-right {
+    width: 50vw;
+    text-align: left;
+    
+}
+
+#role-text {
+    color:#4CAF50;
 }
 
 #tools-section {
-    height: 50vh;
+    height: 20vh;
     margin-top: 20px;
     text-align: center;
     color: white;

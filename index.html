@@ -29,17 +29,43 @@
 
             <div class="link"><a href="#contact">Contact</a></div>
             <div class="link"><a href="#projects">Work</a></div>
-            <div class="link"><a href="#welcome-section">About</a></div>
-            <div class="link"><a href="#contact">Home</a></div>
-            
+            <div class="link"><a href="#welcome-section">About</a></div>            
             
         </nav>
     </header>
 
     <div id="welcome-section">
-        <img src="memoji.png" alt="Your Memoji" class="profile-picture">
-        <h1>Hi, I'm Josiah,</h1>
-        <h2>a <h1 id="role-text"></h1></h2>
+        <div id="w-left">
+            <img src="memoji.png" alt="Your Memoji" class="profile-picture">
+            <h1>Hey, I'm Josiah,</h1>
+            <h2>a <h1 id="role-text"></h1></h2>
+        </div>
+        <div id="w-right">
+            <h1 id="role-text">About me:</h1>
+            <p>
+                I am a Zambian national studying in Kenya, currently a 2nd year student at United States International University. With a passion for software engineering and problem-solving. I primarily work with Python and have created several projects that showcase my skills with various libraries such as 
+                <ul>
+                    <li>Django</li>
+                    <li>Pygame</li>
+                    <li>Pandas</li>
+                    <li>Keras</li>
+                </ul>
+            </p>
+            <p>
+                This year, I landed my first internship in full-stack engineering, at an Agri-tech startup called Farmz2u, based in Nigeria. Here, I honed my skills in Django and GitLab while collaborating remotely with my team. My top three technical skills are Python, Git, and Bash.
+                I am also a freelance developer on <a href="https://www.fiverr.com/afrodev_" style="color: greenyellow;">Fiverr</a>. My last gig saw me develop a 2D arcade game for a client in the UK. I offer services in game development as well as building web apps.
+            </p>
+            <p>
+                I lead the Cloud and DevOps track at my university's Google Developer Student Club, exploring new technologies and sharing knowledge with peers. I hold a Responsive Web Design certification from freeCodeCamp and am preparing for the AWS Cloud Practitioner exam.
+            </p>
+          
+            <p>
+                My ultimate goal is to solve real-world problems through innovative projects and become a well-rounded engineer. I am passionate about mastering my craft and learning new tools, especially in cloud computing, cybersecurity, AI, and machine learning.
+            </p>
+            <p>
+                When I'm not writing code, I enjoy playing and watching basketball, as well as reading books like Atomic Habits and any Lee Child action thrillers. I am a Christian and my faith plays a big role in my life.
+            </p>
+        </div>
     </div>
 
     <div id="tools-section">
@@ -130,7 +156,7 @@
 
     <div id="contact">
         <h1>Let's connect 🤙🏾</h1>
-        <p>Have a question or want to work together?</p>
+        <p>Have an innovative idea and want to work together?</p>
         <p>Here's where you can reach me</p>
         <form id="contact-form" action="http://localhost:3000/send-email" method="post">
             <input type="text" id="name" name="name" placeholder="* Name" required>
@@ -163,7 +189,7 @@
  
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const roles = ['software engineer', 'python developer', 'cloud engineer', 'devops engineer'];
+            const roles = ['Software engineer', 'Python developer', 'Cloud engineer', 'DevOps engineer'];
             const roleTextElement = document.getElementById('role-text');
             let roleIndex = 0;
             let charIndex = 0;
