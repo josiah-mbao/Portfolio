@@ -65,6 +65,7 @@ button h4 a:hover {
     flex-direction: row-reverse;
     padding-top: 10px;
     position: fixed;
+    height: 5vh;
     width: 100vw;
     max-width: 100%;
     color: #fff;
@@ -129,9 +130,29 @@ a:hover {
 }
 
 #w-right {
+    height: 80vh;
     width: 50vw;
     text-align: left;
-    
+    overflow: auto;
+}
+
+#w-right ul,
+#w-right ol {
+    margin-left: 20px;
+    color: #fff;
+    font-size: 1em;
+}
+
+#w-right li {
+    margin-bottom: 10px;
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+#w-right h3 {
+    color: #4CAF50; /* Example color for section headers */
+    font-size: 1.5em;
+    margin-bottom: 10px;
 }
 
 #role-text {
@@ -153,7 +174,7 @@ a:hover {
 }
 
 .tools-icons i {
-    font-size: 7em;
+    font-size: 5em;
     transition: transform 0.3s ease;
 }
 
@@ -172,7 +193,7 @@ a:hover {
 
 #project-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid columns */
     grid-gap: 20px;
 }
 
@@ -181,6 +202,8 @@ a:hover {
     flex-direction: column;
     background-color: #1c1c1e;
     border-radius: 3%;
+    width: 100%; /* Occupy full width */
+    margin-bottom: 20px; /* Adjust spacing */
 }
 
 .project-tile .image {
@@ -204,7 +227,7 @@ a:hover {
 #contact {
     background-color: #222629;
     text-align: center;
-    padding: 5%;
+    padding: 1%;
     max-width: 100%;
     color: #fff;
 }
@@ -292,10 +315,11 @@ footer {
     display: inline-block;
     margin-right: 25px;
     padding-left: 2%;
+    padding-bottom: 0%;
 }
 
 h5 {
-    margin-bottom: 10px;
+    margin-bottom: 1px;
 }
 
 .img_text {
@@ -379,5 +403,23 @@ h5 {
     footer {
         padding-top: 2%;
         padding-bottom: 2%;
+    }
+}
+
+@media (max-width: 480px) {
+    .tools-icons i {
+        font-size: 1em; /* Decrease size further for smaller screens if needed */
+    }
+}
+
+@media (min-width: 768px) {
+    #project-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on tablets and larger */
+    }
+}
+
+@media (min-width: 1024px) {
+    #project-grid {
+        grid-template-columns: repeat(3, 1fr); /* Three columns on larger screens */
     }
 }
