@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import TechBadge from './TechBadge';
 import { Project } from '@/types';
+import { CATEGORY_ICONS, CATEGORY_COLORS } from '@/constants/categories';
 
 interface ProjectCardProps {
   project: Project;
@@ -24,11 +25,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-3">
           <span className="text-2xl">
-            {project.category === 'AI/ML' ? '🤖' :
-             project.category === 'FinTech' ? '💰' :
-             project.category === 'DevOps' ? '⚙️' :
-             project.category === 'Gaming' ? '🎮' :
-             project.category === 'Tools' ? '🔧' : '🚀'}
+            {CATEGORY_ICONS[project.category as keyof typeof CATEGORY_ICONS] || CATEGORY_ICONS.default}
           </span>
           <div>
             <h3 className="text-lg font-bold text-emerald-200">{project.title}</h3>
@@ -73,13 +70,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
 
       {/* Project Footer */}
       <div className="flex items-center justify-between pt-4 border-t border-slate-600/30">
-        <span className={`text-xs font-medium ${
-          project.category === 'AI/ML' ? 'text-purple-400' :
-          project.category === 'FinTech' ? 'text-green-400' :
-          project.category === 'DevOps' ? 'text-blue-400' :
-          project.category === 'Gaming' ? 'text-red-400' :
-          'text-gray-400'
-        }`}>
+        <span className={`text-xs font-medium ${CATEGORY_COLORS[project.category as keyof typeof CATEGORY_COLORS] || CATEGORY_COLORS.default}`}>
           {project.category}
         </span>
         <a
