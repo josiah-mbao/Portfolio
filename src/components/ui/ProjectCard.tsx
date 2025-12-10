@@ -5,10 +5,9 @@ import { CATEGORY_ICONS, CATEGORY_COLORS } from '@/constants/categories';
 
 interface ProjectCardProps {
   project: Project;
-  index: number;
 }
 
-export default function ProjectCard({ project, index }: ProjectCardProps) {
+export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <div
       className={`bg-slate-700/80 border rounded-xl p-6 backdrop-blur-sm hover:shadow-lg transition-all duration-500 transform hover:scale-105 ${
@@ -16,10 +15,6 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           ? 'border-emerald-400/70 shadow-lg shadow-emerald-400/20'
           : 'border-slate-600/50 hover:border-emerald-400/50 hover:shadow-emerald-400/10'
       }`}
-      style={{
-        animationDelay: `${index * 100}ms`,
-        animation: 'fadeInUp 0.6s ease-out forwards'
-      }}
     >
       {/* Project Header */}
       <div className="flex items-center justify-between mb-4">

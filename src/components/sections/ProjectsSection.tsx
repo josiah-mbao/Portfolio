@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Project, FilterType } from '@/types';
 import ProjectCard from '../ui/ProjectCard';
+import Reveal from '../ui/Reveal';
 
 interface ProjectsSectionProps {
   projects: Project[];
@@ -63,7 +64,9 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project, index) => (
-            <ProjectCard key={project.id} project={project} index={index} />
+            <Reveal key={project.id} delay={index * 120} direction="up">
+              <ProjectCard project={project} />
+            </Reveal>
           ))}
         </div>
 
