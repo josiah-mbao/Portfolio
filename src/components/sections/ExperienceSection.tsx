@@ -1,54 +1,57 @@
 import Reveal from '../ui/Reveal';
+import SectionContainer from '../ui/primitives/SectionContainer';
+import SectionTitle from '../ui/primitives/SectionTitle';
+import CardShell from '../ui/primitives/CardShell';
 
 export default function ExperienceSection() {
   return (
     <section id="experience" className="py-20 bg-gradient-to-br from-slate-900 via-stone-900 to-gray-900 text-white">
-      <div className="max-w-4xl mx-auto px-6">
+      <SectionContainer>
         <Reveal delay={100} direction="up">
-          <h2 className="text-4xl font-bold text-center mb-6 text-amber-300">Professional Profile</h2>
+          <SectionTitle color="amber">Professional Profile</SectionTitle>
         </Reveal>
 
         {/* Key Highlights */}
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           <Reveal delay={200} direction="up">
-            <div className="bg-slate-700/50 p-6 rounded-xl border border-amber-500/30 text-center">
+            <CardShell variant="glass" borderColor="amber" className="text-center">
               <h3 className="text-2xl font-bold text-amber-200 mb-2">2 Years</h3>
               <p className="text-gray-300 text-sm">Professional Experience</p>
-            </div>
+            </CardShell>
           </Reveal>
           <Reveal delay={300} direction="up">
-            <div className="bg-slate-700/50 p-6 rounded-xl border border-amber-500/30 text-center">
+            <CardShell variant="glass" borderColor="amber" className="text-center">
               <h3 className="text-2xl font-bold text-amber-200 mb-2">10+ Projects</h3>
               <p className="text-gray-300 text-sm">Delivered Successfully</p>
-            </div>
+            </CardShell>
           </Reveal>
           <Reveal delay={400} direction="up">
-            <div className="bg-slate-700/50 p-6 rounded-xl border border-amber-500/30 text-center">
+            <CardShell variant="glass" borderColor="amber" className="text-center">
               <h3 className="text-2xl font-bold text-amber-200 mb-2">5-Star Rating</h3>
               <p className="text-gray-300 text-sm">Client Satisfaction</p>
-            </div>
+            </CardShell>
           </Reveal>
         </div>
 
         {/* Client Testimonials */}
         <div className="grid md:grid-cols-2 gap-6 mb-8">
           <Reveal delay={500} direction="left" distance={30}>
-            <div className="bg-slate-700/60 p-6 rounded-xl border border-amber-500/40">
+            <CardShell variant="elevated" borderColor="amber">
               <p className="text-gray-100 italic mb-4 leading-relaxed text-center">&ldquo;Josiah has more than enough expertise and thinks along with your specific request, definitely recommend! 👍&rdquo;</p>
               <p className="text-amber-200 text-sm text-center">— Iwanrb1, Netherlands</p>
               <div className="flex justify-center text-amber-400 mt-2">
                 ★★★★★
               </div>
-            </div>
+            </CardShell>
           </Reveal>
           <Reveal delay={600} direction="right" distance={30}>
-            <div className="bg-slate-700/60 p-6 rounded-xl border border-amber-500/40">
+            <CardShell variant="elevated" borderColor="amber">
               <p className="text-gray-100 italic mb-4 leading-relaxed text-center">&ldquo;Very impressed by the fast responses and fast delivery time. Was a pleasure working with him and would highly recommend.&rdquo;</p>
               <p className="text-amber-200 text-sm">— Vikashz1212, United Kingdom</p>
               <div className="flex justify-center text-amber-400 mt-2 mb-0">
                 ★★★★★
               </div>
-            </div>
+            </CardShell>
           </Reveal>
         </div>
 
@@ -69,7 +72,7 @@ export default function ExperienceSection() {
             </a>
           </div>
         </Reveal>
-      </div>
+      </SectionContainer>
     </section>
   );
 }

@@ -4,6 +4,8 @@ import { useState } from 'react';
 import { Project, FilterType } from '@/types';
 import ProjectCard from '../ui/ProjectCard';
 import Reveal from '../ui/Reveal';
+import SectionContainer from '../ui/primitives/SectionContainer';
+import SectionTitle from '../ui/primitives/SectionTitle';
 
 interface ProjectsSectionProps {
   projects: Project[];
@@ -37,8 +39,8 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
 
   return (
     <section id="projects" className="py-20 bg-gradient-to-bl from-slate-800 via-slate-900 to-stone-900 text-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center mb-8 text-emerald-300">My Projects</h2>
+      <SectionContainer maxWidth="7xl">
+        <SectionTitle>My Projects</SectionTitle>
         <p className="text-xl text-gray-300 text-center mb-12 max-w-3xl mx-auto">
           Showcasing my journey through diverse technologies and domains.
           From AI systems to fintech solutions, each project represents a unique challenge and learning experience.
@@ -82,7 +84,7 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
             </button>
           </div>
         )}
-      </div>
+      </SectionContainer>
     </section>
   );
 }
